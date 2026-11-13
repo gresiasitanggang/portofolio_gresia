@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: "Plus Jakarta Sans", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.font-playfair {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-heading {
+  font-family: "Plus Jakarta Sans", "Poppins", sans-serif;
+}
+
+/* Slow-motion animated gradient background mesh */
+@keyframes slowGradientDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Independent Fullscreen Background Mesh: Midnight Black, Dark Blue, and glowing Orange */
+.bg-independent-mesh {
+  background:
+    radial-gradient(ellipse 65% 55% at 88% 18%, rgba(249, 115, 22, 0.26) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 12% 30%, rgba(29, 78, 216, 0.38) 0%, transparent 65%),
+    radial-gradient(ellipse 65% 55% at 75% 65%, rgba(14, 165, 233, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 20% 85%, rgba(234, 88, 12, 0.24) 0%, transparent 58%),
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(30, 58, 138, 0.35) 0%, transparent 65%),
+    linear-gradient(160deg, #010206 0%, #030712 35%, #080e1c 70%, #030409 100%);
+  background-size: 200% 200%;
+  animation: slowGradientDark 24s ease infinite;
+}
+
+/* Pure Translucent Glassmorphic Surfaces to show underlying background gradients */
+.glass-surface-dark {
+  background: rgba(8, 16, 32, 0.28);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.40);
+}
+
+/* Translucent Glassmorphism Floating Header */
+.floating-header-dark {
+  background: rgba(6, 14, 28, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Primary Button in Rich Blue/Cobalt Gradient */
+.gradient-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gradient-btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0369a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.5);
+}
+
+.gradient-btn-secondary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #ffffff;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gradient-btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border-color: rgba(16, 185, 129, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 9999px;
+}
