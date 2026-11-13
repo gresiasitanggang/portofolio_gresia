@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const HERO_PHOTO = '/src/assets/images/hero_portrait_transparent.png';
+const HERO_PHOTO = 'images/me_portrait.png';
 
 export const HomeSection: React.FC = () => {
   const scrollTo = (id: string) => {
