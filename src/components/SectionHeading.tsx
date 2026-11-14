@@ -20,7 +20,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         {/* Layer 1: Giant underlay title (subtle background aura, strictly single-line) */}
         <span
           aria-hidden="true"
-          className="font-playfair font-black tracking-tight text-white/[0.06] uppercase leading-none pointer-events-none text-[63px] sm:text-[87px] md:text-[111px] lg:text-[143px] xl:text-[160px] whitespace-nowrap"
+          className="font-playfair font-black tracking-tight text-white/[0.1] uppercase leading-none pointer-events-none text-[63px] sm:text-[87px] md:text-[111px] lg:text-[143px] xl:text-[160px] whitespace-nowrap"
         >
           {largeTitle}
         </span>
